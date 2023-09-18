@@ -38,6 +38,9 @@ ul.navbar {
   }
   h2 {
     font-weight: 100;
+    font-size: 21px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
   .Statement {
     padding: 10px;
