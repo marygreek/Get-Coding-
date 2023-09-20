@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New User</title>
+    <link rel="stylesheet" href="../CSS/project.css" />
+    <script>  
+      function selectOption(){
+       const selectElement = document.getElementById("options");
+       const selectValue = selectElement.value;
+       
+       const infodiv = document.getElementById("additionalInformation");
+
+       if (selectValue == "one") {
+          infodiv.innerHTML = "Rent is selected."
+         } else if (selectValue == "two"){
+          infodiv.innerHTML = "Mortgage is Selected."
+         } else if(selectValue == "three"){
+          infodiv.innerHTML = "Three is selected."
+         }
+      }   
+    </script>
+  </head>
+  <body>
+    <h1> Question 1</h1>
+    <h2> Do you currently pay for rent or a mortgage? </h2>
+    <select id=" Home Expenses" onchange="selectOption()">
+      <option value"one>Rent</option>
+      <option value"two">Mortgage</option>
+      <option value'"three">No Payment</option>
+    </select>
+    <div id=""additionalInformation">
+    </div>
+
+  <body/> 
+</html>

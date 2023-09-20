@@ -4,38 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="../CSS/styles.css" />
-    <script>
-      function loginUser() {
-        const username = document.getElementById("usernameInput");
-        const password = document.getElementById("passwordInput");
-
-        const usernameValue = username.value;
-        const passwordValue = password.value;
-
-        console.log(usernameValue);
-        console.log(passwordValue);
-
-        window.location.href = "home.html";
-
-      }
-    </script>
+    <link rel="stylesheet" href="/CSS/Login.css" />
+    
   </head>
   <body>
-    <label>Username:</label>
-    <input type="text" id="usernameInput">
+    <div class="container">
+      <h1>Login</h1>
+      <form id="login-form" action="process-login.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
 
-  </br>
-  </br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
 
-  <label>Password:</label>
-  <input type="password" id="passwordInput">
+        <button type="submit">Login</button>
+      </form>
+    <div/>
+      <!-- <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
 
-</br>
-</br>
+       </br>
+       </br>
 
-<button onclick="loginUser()">Login</button>
+       <label for="password">Password:</label>
+       <input type="password" id="password" name="password" required>
 
+      </br>
+      </br>
+
+       <button type="submit">Login</button>
+    </form> -->
+    
+    <div class="forgot-links">
+      <a href="#" id="forgot-username">Forgot Username</a> |
+      <a href="#" id="forgot-password">Forgot Password</a
+    <div/>
+
+<!-- <script>
+  function loginUser() {
+    const username = document.getElementById("usernameInput");
+    const password = document.getElementById("passwordInput");
+
+    const usernameValue = username.value;
+    const passwordValue = password.value;
+
+    console.log(usernameValue);
+    console.log(passwordValue);
+
+    window.location.href = "home.html";
+  }
+</script> -->
 <body/>
-
 </html>
