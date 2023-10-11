@@ -3,43 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="/CSS/Login.css" />
-    
+    <title>New User</title>
+    <link rel="stylesheet" href="../CSS/Login.css" />
+    <script src="../JS/Project.js"></script>
   </head>
   <body>
     <div class="container">
       <h1>Please Create a Username and Password</h1>
-      <form>
+      <form id="NewUser-form" method="post">
+      
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+        <input type="text" id="username" name="username" required />
 
-       </br>
-       </br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
 
-       <label for="password">Password:</label>
-       <input type="password" id="password" name="password" required>
-
-      </br>
-      </br>
-
-       <button type="submit">Login</button>
-    </form>
-    <div/>
-
-<script>
-  function loginUser() {
-    const username = document.getElementById("usernameInput");
-    const password = document.getElementById("passwordInput");
-
-    const usernameValue = username.value;
-    const passwordValue = password.value;
-
-    console.log(usernameValue);
-    console.log(passwordValue);
-
-    window.location.href = "home.html";
-  }
-</script>
-<body/>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </body>
 </html>
