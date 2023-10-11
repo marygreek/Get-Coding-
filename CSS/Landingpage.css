@@ -1,7 +1,7 @@
 ul.navbar {
     list-style-type: none;
-    margin: 10px;
-    padding: 0;
+    margin: 0px;
+    padding: 10px;
     text-align: right;
     font-size: 21px;
   }
@@ -13,66 +13,57 @@ ul.navbar {
     text-decoration: none;
     color: rgb(0, 0, 0);
   }
-  .company-name {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 10px;
-  }
+  .navbar::after {
+    content: ""; /* Create an empty pseudo-element */
+    display: block; /* Make it a block-level element */
+    width: 100%; /* Stretch it across the screen */
+    border-bottom: 2px solid #b0c1b3; /* Border style for the bottom border */
+    margin-top: 20px; /* Margin to create space between the navbar and the border */
+}
   .NewUser {
-    border: 1px solid #ffffff;
+    border: 2px solid #b0c1b3;
     border-radius: 25px;
     padding: 10px;
   }
   body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #b0c1b3;
+    background-color: white;
     text-align: justify;
     padding: 20px 20px 20px 20px;
     word-wrap: normal;
     padding:0;
     height:100vh;
-
   }
   h1 {
-    font-weight: 100;
+    font-weight: 70;
     font-size: 24px;
     margin-top: 40px;
     margin-bottom: 40px;
-  }
-  h2 {
-    font-weight: 100;
-    font-size: 21px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-  .Statement {
     padding: 10px;
     width: 400px;
-    margin-top: 40px;
-    margin-left: 100px;
   }
-  .Solution {
+  h2 {
+    font-weight: 70;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     padding: 10px;
     width: 600px;
-    margin-top: 40px;
-    margin-left: 100px;
   }
-
-  .left-column {
-    flex: 1; 
-    background-color: #f0f0f0; 
-    padding: 20px
+  .column {
+    float: left;
+    padding: 0px;
+    height: 800px;
+    box-sizing: border-box;
   }
-
-.right-column {
-    flex: 1; 
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #b0c1b3;
-  } 
-.container {
-    width: 100%;
-    height: 100%;
+  .left {
+    width: 45%;
+  }
+  .right {
+    width: 55%;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
   }

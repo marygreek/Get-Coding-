@@ -2,9 +2,8 @@
 box-sizing: border-box;
 padding: 0;
 margin: 5;
-
-
 }
+
 body {
     font-family: Arial, sans-serif;
     background-color: #b0c1b3;
@@ -55,8 +54,8 @@ button:hover {
 }
 
 .forgot-links {
-    text-align: right;
-    margin-top: 15px;
+    text-align: center;
+    margin-top: 0px;
 }
 
 .forgot-links a {
