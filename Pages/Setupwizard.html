@@ -1,37 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New User</title>
-    <link rel="stylesheet" href="../CSS/project.css" />
-    <script>  
-      function selectOption(){
-       const selectElement = document.getElementById("options");
-       const selectValue = selectElement.value;
-       
-       const infodiv = document.getElementById("additionalInformation");
-
-       if (selectValue == "one") {
-          infodiv.innerHTML = "Rent is selected."
-         } else if (selectValue == "two"){
-          infodiv.innerHTML = "Mortgage is Selected."
-         } else if(selectValue == "three"){
-          infodiv.innerHTML = "Three is selected."
-         }
-      }   
-    </script>
-  </head>
-  <body>
-    <h1> Question 1</h1>
-    <h2> Do you currently pay for rent or a mortgage? </h2>
-    <select id=" Home Expenses" onchange="selectOption()">
-      <option value"one>Rent</option>
-      <option value"two">Mortgage</option>
-      <option value'"three">No Payment</option>
+    <title>Set up Wizard</title>
+    <link rel="stylesheet" href="../CSS/Setupwizard.css" />
+    <!-- <script src="../JS/Setupwizard.js"></script> -->
+</head>
+<body>
+<div class="navbar">
+    <h1>Quick Links</h1>
+    <h2>Expenses</h2>
+    <ul>
+        <li><a href="#">Auto and Transportation</a></li>
+        <li><a href="#">Home </a></li>
+        <li><a href="#">Bills and Utilities</a></li>
+        <li><a href="#">Fees and Charges</a></li>
+        <li><a href="#">Transfers</a></li>
+        <li><a href="#">Food and Dining</a></li>
+        <li><a href="#">Personal Care</a></li>
+    </ul>
+    <h2>Income</h2>
+    <ul>
+        <li><a href="#">Work Income</a></li>
+        <li><a href="#">Misc Income</a></li>
+    </ul>
+</div>
+<div id="question-container">
+    <label id="question-label">Question 1:</label>
+    <select id="answer-dropdown">
+      <option value="Option 1">Option 1</option>
+      <option value="Option 2">Option 2</option>
+      <option value="Option 3">Option 3</option>
+      <option value="Option 4">Option 4</option>
     </select>
-    <div id=""additionalInformation">
-    </div>
+    <button id="next-button">Next</button>
+  </div>
+<script>
+    const questions = [
+      {
+        question: "Do you currently pay for rent or a mortgage?:",
+        options: ["Rent", "Mortgage", "None"],
+      },
+      {
+        question: "How much do you pay?:",
+        options: ["Insert Amount"],
+      },
+      {
+        question: "How often do you pay?:",
+        options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly", "Other"],
+      },
 
-  <body/> 
+      { question: "When is your next payment?:", options: ["Insert Date"] },
+    ];
+
+    let currentQuestionIndex = 0;
+    const questionContainer = document.getElementById("question-container");
+    const questionLabel = document.getElementById("question-label");
+    const answerDropdown = document.getElementById("answer-dropdown");
+    const nextButton = document.getElementById("next-button");
+
+    function displayCurrentQuestion() {
+      const currentQuestion = questions[currentQuestionIndex];
+      questionLabel.textContent = currentQuestion.question;
+      answerDropdown.innerHTML = "";
+
+      currentQuestion.options.forEach((option) => {
+        const optionElement = document.createElement("option");
+        optionElement.value = option;
+        optionElement.textContent = option;
+        answerDropdown.appendChild(optionElement);
+      });
+    }
+
+    displayCurrentQuestion();
+
+    nextButton.addEventListener("click", () => {
+      currentQuestionIndex++;
+
+      if (currentQuestionIndex < questions.length) {
+        displayCurrentQuestion();
+      } else {
+        alert("No more questions. Survey complete!");
+      }
+    });
+  </script>
+</body>
 </html>
