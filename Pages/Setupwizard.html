@@ -26,6 +26,8 @@
         <li><a href="#">Misc Income</a></li>
     </ul>
 </div>
+<div class="content">
+</div>
 <div id="question-container">
     <label id="question-label">Question 1:</label>
     <select id="answer-dropdown">
@@ -36,24 +38,42 @@
     </select>
     <button id="next-button">Next</button>
   </div>
+  <div class="Header">
+    <span class="header">Auto and Transportation</span>
+</div>
 <script>
     const questions = [
       {
-        question: "Do you currently pay for rent or a mortgage?:",
-        options: ["Rent", "Mortgage", "None"],
+        question: "Do you own any vehicles that you still make payments on?",
+        options: ["Yes", "No"],
       },
       {
-        question: "How much do you pay?:",
+        question: "How Many?",
         options: ["Insert Amount"],
+// If multiple vehicles - sub wizard for each - ex: Vehcile 1 and Vehicle 2
       },
       {
-        question: "How often do you pay?:",
+        question: "How often do you pay?",
         options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly", "Other"],
       },
 
-      { question: "When is your next payment?:", options: ["Insert Date"] },
-    ];
+      {
+        question: "How much is your payment?",
+        options: ["Insert Amount"],
+      },
 
+      { question: "When is your next payment?", options: ["Insert Date"] },
+      {
+        question: "How much do you pay for car insurance for all vehicles per month?",
+        options: ["Insert Amount"],
+      },
+      {
+        question: "On average, how much do you pay for gas for all vehicles per month?",
+        options: ["Insert Amount"],
+      },
+    ];
+// After last question - Thank you for submitting your auto and transportation expenses. Let's move on to home expenses 
+// Add button - Save and exit / Save and continue
     let currentQuestionIndex = 0;
     const questionContainer = document.getElementById("question-container");
     const questionLabel = document.getElementById("question-label");
