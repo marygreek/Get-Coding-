@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Set up Wizard</title>
     <link rel="stylesheet" href="../CSS/Setupwizard.css" />
-    <!-- <script src="../JS/Setupwizard.js"></script> -->
+    
 </head>
 <body>
 <div class="navbar">
@@ -37,73 +37,11 @@
       <option value="Option 4">Option 4</option>
     </select>
     <button id="next-button">Next</button>
+    <button id="last-button">Previous</button>
   </div>
   <div class="Header">
     <span class="header">Auto and Transportation</span>
 </div>
-<script>
-    const questions = [
-      {
-        question: "Do you own any vehicles that you still make payments on?",
-        options: ["Yes", "No"],
-      },
-      {
-        question: "How Many?",
-        options: ["Insert Amount"],
-// If multiple vehicles - sub wizard for each - ex: Vehcile 1 and Vehicle 2
-      },
-      {
-        question: "How often do you pay?",
-        options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly", "Other"],
-      },
-
-      {
-        question: "How much is your payment?",
-        options: ["Insert Amount"],
-      },
-
-      { question: "When is your next payment?", options: ["Insert Date"] },
-      {
-        question: "How much do you pay for car insurance for all vehicles per month?",
-        options: ["Insert Amount"],
-      },
-      {
-        question: "On average, how much do you pay for gas for all vehicles per month?",
-        options: ["Insert Amount"],
-      },
-    ];
-// After last question - Thank you for submitting your auto and transportation expenses. Let's move on to home expenses 
-// Add button - Save and exit / Save and continue
-    let currentQuestionIndex = 0;
-    const questionContainer = document.getElementById("question-container");
-    const questionLabel = document.getElementById("question-label");
-    const answerDropdown = document.getElementById("answer-dropdown");
-    const nextButton = document.getElementById("next-button");
-
-    function displayCurrentQuestion() {
-      const currentQuestion = questions[currentQuestionIndex];
-      questionLabel.textContent = currentQuestion.question;
-      answerDropdown.innerHTML = "";
-
-      currentQuestion.options.forEach((option) => {
-        const optionElement = document.createElement("option");
-        optionElement.value = option;
-        optionElement.textContent = option;
-        answerDropdown.appendChild(optionElement);
-      });
-    }
-
-    displayCurrentQuestion();
-
-    nextButton.addEventListener("click", () => {
-      currentQuestionIndex++;
-
-      if (currentQuestionIndex < questions.length) {
-        displayCurrentQuestion();
-      } else {
-        alert("No more questions. Survey complete!");
-      }
-    });
-  </script>
 </body>
+<script src="../JS/Setupwizard.js"></script>
 </html>

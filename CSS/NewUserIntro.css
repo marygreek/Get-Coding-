@@ -1,28 +1,10 @@
-.navbar {
-    width: 15%; 
-    background-color: #b0c1b3;
-    padding: 20px;
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-}
-.navbar li a {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-}
-ul {
-  list-style-type: none;
-  padding: 0px;
-}
 .content {
-    margin-left: 20%; 
+    margin-left: 10px; 
     padding: 12px;
 }        
   body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
+    background-color: #b0c1b3;
   }
   h1 {
     font-weight: 70;
@@ -46,7 +28,7 @@ ul {
   }
   p {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 21px;
+    font-size: 20px;
     margin-top: 30px;
     margin-bottom: 40px;
     padding: 0px;
