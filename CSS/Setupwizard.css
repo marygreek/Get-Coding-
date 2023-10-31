@@ -76,3 +76,15 @@ ul {
     top: 100px; 
     left: 400px;
   }
+  #answer-dropdown,
+  #answer-input {
+    margin-top: 15px; 
+  }
+
+  #next-button {
+    margin-top: 15px; /
+  }
+
+  #last-button {
+    margin-top: 15px; 
+  }

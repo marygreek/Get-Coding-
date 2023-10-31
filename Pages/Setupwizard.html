@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Set up Wizard</title>
     <link rel="stylesheet" href="../CSS/Setupwizard.css" />
-    
-</head>
-<body>
-<div class="navbar">
-    <h1>Quick Links</h1>
-    <h2>Expenses</h2>
-    <ul>
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>Quick Links</h1>
+      <h2>Expenses</h2>
+      <ul>
         <li><a href="#">Auto and Transportation</a></li>
         <li><a href="#">Home </a></li>
         <li><a href="#">Bills and Utilities</a></li>
@@ -19,29 +18,31 @@
         <li><a href="#">Transfers</a></li>
         <li><a href="#">Food and Dining</a></li>
         <li><a href="#">Personal Care</a></li>
-    </ul>
-    <h2>Income</h2>
-    <ul>
+      </ul>
+      <h2>Income</h2>
+      <ul>
         <li><a href="#">Work Income</a></li>
         <li><a href="#">Misc Income</a></li>
-    </ul>
-</div>
-<div class="content">
-</div>
-<div id="question-container">
-    <label id="question-label">Question 1:</label>
-    <select id="answer-dropdown">
-      <option value="Option 1">Option 1</option>
-      <option value="Option 2">Option 2</option>
-      <option value="Option 3">Option 3</option>
-      <option value="Option 4">Option 4</option>
-    </select>
-    <button id="next-button">Next</button>
-    <button id="last-button">Previous</button>
-  </div>
-  <div class="Header">
-    <span class="header">Auto and Transportation</span>
-</div>
-</body>
-<script src="../JS/Setupwizard.js"></script>
+      </ul>
+    </div>
+    <div class="content"></div>
+    <div id="question-container">
+      <label id="question-label">Question 1:</label>
+      <div id="answer-container">
+        <select id="answer-dropdown">
+          <option value="Option 1">Option 1</option>
+          <option value="Option 2">Option 2</option>
+          <option value="Option 3">Option 3</option>
+          <option value="Option 4">Option 4</option>
+        </select>
+        <input type="text" id="answer-input" />
+      </div>
+      <button id="next-button">Next</button>
+      <button id="last-button">Previous</button>
+    </div>
+    <div class="Header">
+      <span class="header">Auto and Transportation</span>
+    </div>
+  </body>
+  <script src="../JS/Setupwizard.js"></script>
 </html>
