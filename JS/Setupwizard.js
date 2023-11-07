@@ -40,7 +40,8 @@ const questions = [
     key:"gasCost"
   },
 ];
-const value = {
+
+const answers = {
   ownVehicle :0,
   vehicleCount :0,
   paymentFrequency :0,
@@ -48,7 +49,8 @@ const value = {
   paymentDate :0,
   InsCost :0,
   gasCost :0,
-}
+};
+
 let currentQuestionIndex = 0;
 const questionContainer = document.getElementById("question-container");
 const questionLabel = document.getElementById("question-label");
@@ -80,24 +82,41 @@ function displayCurrentQuestion() {
   }
 }
 
+function saveAnswer() {
+  const currentQuestion = questions[currentQuestionIndex];
+  if (currentQuestion.type === "options") {
+    answers[currentQuestion.key] = answerDropdown.value;
+  } else {
+    answers[currentQuestion.key] = answerInput.value;
+  }
+  // console.log("Answer saved:", answers);
+}
+
+console.log("Answer saved:", answers);
+
 displayCurrentQuestion();
 
 nextButton.addEventListener("click", () => {
+  saveAnswer();
   currentQuestionIndex++;
 
   if (currentQuestionIndex < questions.length) {
-      displayCurrentQuestion();
+    displayCurrentQuestion();
   } else {
-      confirm("No more questions. Survey complete!");
+
+    const answersJSON = JSON.stringify(answers);
+    console.log("Final answers JSON:", answersJSON);
+    confirm("No more questions. Survey complete!");
   }
 });
 
 lastButton.addEventListener("click", () => {
+  saveAnswer();
   currentQuestionIndex--;
 
   if (currentQuestionIndex >= 0) {
-      displayCurrentQuestion();
+    displayCurrentQuestion();
   } else {
-      alert("You are at the beginning of the survey.");
+    alert("You are at the beginning of the survey.");
   }
 });
