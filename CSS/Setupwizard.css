@@ -87,4 +87,19 @@ ul {
 
   #last-button {
     margin-top: 15px; 
+    
+  }
+  #save-continue-button {
+    position: absolute;
+    bottom: 15;
+    left: 400px; 
+    margin-left: 15px;
+    margin-bottom: 15px; 
+
+  }
+  #save-exit-button {
+      position: absolute;
+      bottom: 15;
+      left: 560px; 
+      margin-bottom: 15px; 
   }

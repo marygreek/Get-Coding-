@@ -106,7 +106,7 @@ nextButton.addEventListener("click", () => {
 
     const answersJSON = JSON.stringify(answers);
     console.log("Final answers JSON:", answersJSON);
-    confirm("No more questions. Survey complete!");
+    confirm("Thank you for completing the Automotive and Transport section. Please choose to save and continue or save and exit. ");
   }
 });
 
@@ -120,3 +120,15 @@ lastButton.addEventListener("click", () => {
     alert("You are at the beginning of the survey.");
   }
 });
+
+const saveContinueButton = document.getElementById("save-continue-button");
+saveContinueButton.addEventListener("click", () => {
+  window.location.href = "homewiz.html";
+});
+
+const saveexitButton = document.getElementById("save-exit-button");
+saveexitButton.addEventListener("click", () => {
+  window.location.href = "NewUserIntro.html";
+});
+
+// How do I set it up so each section moves to the next upon completion? If Iuse the script here, it will go to the Homewiz page.

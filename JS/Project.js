@@ -22,6 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     
     NewUserIntro.addEventListener("submit", function (event) {
         event.preventDefault(); 
-        window.location.href = "Setupwizard.html";
+        window.location.href = "Autoandtransportwiz.html";
     });
 });
