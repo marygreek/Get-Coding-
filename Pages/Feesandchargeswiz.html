@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Set up Wizard</title>
+    <title>Fees and Charges Wizard</title>
     <link rel="stylesheet" href="../CSS/Setupwizard.css" />
   </head>
   <body>
@@ -11,21 +11,30 @@
       <h1>Quick Links</h1>
       <h2>Expenses</h2>
       <ul>
-        <li><a href="Autoandtransportwiz.html">Auto and Transportation</a></li>
-        <li><a href="Homewiz.html">Home </a></li>
-        <li><a href="Billsandutilitieswiz.html">Bills and Utilities</a></li>
-        <li><a href="Feesandchargeswiz.html">Fees and Charges</a></li>
-        <li><a href="Transferswiz.html">Transfers</a></li>
-        <li><a href="Foodanddiningwiz.html">Food and Dining</a></li>
-        <li><a href="Personalcarewiz.html">Personal Care</a></li>
+        <li><a href="Autoandtransportwiz.html">Auto and Transportation<span class="progress-bar"></span></a></li>
+        <li><a href="Homewiz.html">Home <span class="progress-bar"></span></a></li>
+        <li><a href="Billsandutilitieswiz.html">Bills and Utilities<span class="progress-bar"></span></a></li>
+        <li><a href="Feesandchargeswiz.html">Fees and Charges<span class="progress-bar"></span></a></li>
+        <li><a href="Transferswiz.html">Transfers<span class="progress-bar"></span></a></li>
+        <li><a href="Foodanddiningwiz.html">Food and Dining<span class="progress-bar"></span></a></li>
+        <li><a href="Personalcarewiz.html">Personal Care<span class="progress-bar"></span></a></li>
       </ul>
       <h2>Income</h2>
       <ul>
         <li><a href="Workincomewiz.html">Work Income</a></li>
         <li><a href="Miscincome.html">Misc Income</a></li>
       </ul>
+      <ul>
+        <li><a href="Summary.html">Summary Page</a></li>
+      </ul>
     </div>
     <div class="content"></div>
+<div class="progress-bar">
+  <div class="progress-item"></div>
+  <div class="progress-item"></div>
+  <div class="progress-item"></div>
+  <!-- Add more items as needed -->
+</div>
     <div id="question-container">
       <label id="question-label">Question 1:</label>
       <div id="answer-container">
@@ -35,11 +44,22 @@
       <button id="last-button">Previous</button>
       <button id="next-button">Next</button>
     </div>
+  </div>
+  <div id="question-container">
+    <button id="skip-button">Skip This Section</button>
+  </div>
     <div class="Header">
       <span class="header">Auto and Transportation</span>
+      <div class="line"></div>
     </div>
     <button id="save-continue-button">Save and Continue</button>
     <button id="save-exit-button">Save and Exit</button>
+    <div class="column right" style="background-color: white">
+      <img
+        src="../Images/course_icon.png"
+        alt="Money Tree"
+      />
+    </div>
   </body>
-  <script src="../JS/Setupwizard.js"></script>
+  <script src="/JS/Feesandchargeswiz.js"></script>
 </html>

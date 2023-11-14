@@ -14,7 +14,7 @@ const questions = [
   {
     question: "How often do you pay?",
     type: "options",
-    options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly", "Other"],
+    options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
     key:"paymentFrequency"
   },
 
@@ -58,6 +58,7 @@ const answerDropdown = document.getElementById("answer-dropdown");
 const answerInput = document.getElementById("answer-input");
 const nextButton = document.getElementById("next-button");
 const lastButton = document.getElementById("last-button");
+const skipButton = document.getElementById("skip-button");
 
 function displayCurrentQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
@@ -89,12 +90,9 @@ function saveAnswer() {
   } else {
     answers[currentQuestion.key] = answerInput.value;
   }
-  // console.log("Answer saved:", answers);
 }
 
-console.log("Answer saved:", answers);
-
-displayCurrentQuestion();
+  displayCurrentQuestion();
 
 nextButton.addEventListener("click", () => {
   saveAnswer();
@@ -103,10 +101,10 @@ nextButton.addEventListener("click", () => {
   if (currentQuestionIndex < questions.length) {
     displayCurrentQuestion();
   } else {
-
     const answersJSON = JSON.stringify(answers);
     console.log("Final answers JSON:", answersJSON);
-    confirm("Thank you for completing the Automotive and Transport section. Please choose to save and continue or save and exit. ");
+    localStorage.setItem("answers", answersJSON);
+    confirm("Thank you for completing the Automotive and Transport section. Please choose to save and continue or save and exit.");
   }
 });
 
@@ -121,14 +119,24 @@ lastButton.addEventListener("click", () => {
   }
 });
 
+const skipsSection = document.getElementById("skip-button");
+skipButton.addEventListener("click", () => {
+  window.location.href = "Miscincome.html";
+});
 const saveContinueButton = document.getElementById("save-continue-button");
 saveContinueButton.addEventListener("click", () => {
-  window.location.href = "homewiz.html";
+  window.location.href = "Miscincome.html";
 });
 
 const saveexitButton = document.getElementById("save-exit-button");
 saveexitButton.addEventListener("click", () => {
-  window.location.href = "NewUserIntro.html";
+window.location.href = "NewUserIntro.html";
 });
 
-// How do I set it up so each section moves to the next upon completion? If Iuse the script here, it will go to the Homewiz page.
+let answers_serialized = JSON.stringify(answers);
+console.log(answers_serialized);
+
+localStorage.setItem("answers", answers_serialized);
+
+let answers_deserialized = JSON.parse(localStorage.getItem("answers"));
+
