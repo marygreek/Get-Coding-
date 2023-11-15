@@ -1,54 +1,63 @@
 const questions = [
   {
-    question: "Do you own any vehicles that you still make payments on?",
+    question: "Do you currently pay rent of for a mortgage?",
     type: "options",
     options: ["Yes", "No"],
-    key:"ownVehicle"
+    key:"housingType"
   },
   {
-    question: "How Many?",
-    type: "text",
-    key:"vehicleCount"
+    question: "Which type",
+    type: "options",
+    options: ["Rent", "Mortgage"],
+    key:"rentMort"
     // If multiple vehicles - sub wizard for each - ex: Vehicle 1 and Vehicle 2
   },
   {
     question: "How often do you pay?",
     type: "options",
     options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
-    key:"paymentFrequency"
+    key:"homePaymentfreq"
   },
 
   {
     question: "How much is your payment?",
     type: "text",
-    key:"paymentAmount"
+    key:"homePaymentAmount"
   },
 
   {
     question: "When is your next payment?",
     type: "date",
-    key:"paymentDate"
+    key:"homePaymentDate"
   },
   {
-    question: "How much do you pay for car insurance for all vehicles per month?",
+    question: "How much do you pay for home or renters insurance? ",
     type: "text",
-    key:"InsCost"
+    key:"homeInsCost"
   },
   {
-    question: "On average, how much do you pay for gas for all vehicles per month?",
-    type: "text",
-    key:"gasCost"
+    question: "How often do you pay?",
+    type: "options",
+    options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
+    key:"homeInsfreq"
   },
+  {
+    question: "How much is your payment?",
+    type: "text",
+    key:"homeInsAmount"
+  },
+  
 ];
 
-const answers = {
-  ownVehicle :0,
-  vehicleCount :0,
-  paymentFrequency :0,
-  paymentAmount :0,
-  paymentDate :0,
-  InsCost :0,
-  gasCost :0,
+const homeanswers = {
+  housingType :0,
+  rentMort :0,
+  homePaymentfreq :0,
+  homePaymentAmount :0,
+  homePaymentDate :0,
+  homeInsCost :0,
+  homeInsfreq :0,
+  homeInsAmount:0,
 };
 
 let currentQuestionIndex = 0;
@@ -86,9 +95,9 @@ function displayCurrentQuestion() {
 function saveAnswer() {
   const currentQuestion = questions[currentQuestionIndex];
   if (currentQuestion.type === "options") {
-    answers[currentQuestion.key] = answerDropdown.value;
+    homeanswers[currentQuestion.key] = answerDropdown.value;
   } else {
-    answers[currentQuestion.key] = answerInput.value;
+    homeanswers[currentQuestion.key] = answerInput.value;
   }
 }
 
@@ -101,9 +110,9 @@ nextButton.addEventListener("click", () => {
   if (currentQuestionIndex < questions.length) {
     displayCurrentQuestion();
   } else {
-    const answersJSON = JSON.stringify(answers);
+    const answersJSON = JSON.stringify(homeanswers);
     console.log("Final answers JSON:", answersJSON);
-    localStorage.setItem("answers", answersJSON);
+    localStorage.setItem("homeanswers", answersJSON);
     confirm("Thank you for completing the Automotive and Transport section. Please choose to save and continue or save and exit.");
   }
 });
@@ -119,24 +128,23 @@ lastButton.addEventListener("click", () => {
   }
 });
 
-const skipsSection = document.getElementById("skip-button");
-skipButton.addEventListener("click", () => {
-  window.location.href = "Billsandutilitieswiz.html";
-});
-const saveContinueButton = document.getElementById("save-continue-button");
-saveContinueButton.addEventListener("click", () => {
-  window.location.href = "Billsandutilitieswiz.html";
-});
-
+const skipsSection = document.getElementById("skip-button");							
+skipButton.addEventListener("click", () => {							
+  window.location.href = "Billsandutilitieswiz.html";							
+});							
+const saveContinueButton = document.getElementById("save-continue-button");							
+saveContinueButton.addEventListener("click", () => {							
+  window.location.href = "Billsandutilitieswiz.html";							
+});							
 const saveexitButton = document.getElementById("save-exit-button");
 saveexitButton.addEventListener("click", () => {
 window.location.href = "NewUserIntro.html";
 });
 
-let answers_serialized = JSON.stringify(answers);
-console.log(answers_serialized);
+let homeanswers_serialized = JSON.stringify(homeanswers);
+console.log(homeanswers_serialized);
 
-localStorage.setItem("answers", answers_serialized);
+localStorage.setItem("homeanswers", homeanswers_serialized);
 
-let answers_deserialized = JSON.parse(localStorage.getItem("answers"));
+let homeanswers_deserialized = JSON.parse(localStorage.getItem("homeanswers"));
 

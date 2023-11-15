@@ -15,24 +15,35 @@ const questions = [
     question: "How often do you pay?",
     type: "options",
     options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
-    key:"paymentFrequency"
+    key:"carPaymentfreq"
   },
 
   {
     question: "How much is your payment?",
     type: "text",
-    key:"paymentAmount"
+    key:"carPaymentAmount"
   },
 
   {
     question: "When is your next payment?",
     type: "date",
-    key:"paymentDate"
+    key:"carPaymentDate"
   },
   {
     question: "How much do you pay for car insurance for all vehicles per month?",
     type: "text",
-    key:"InsCost"
+    key:"carInsCost"
+  },
+  {
+    question: "How often do you pay?",
+    type: "options",
+    options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
+    key:"carInsfreq"
+  },
+  {
+    question: "How much is your payment?",
+    type: "text",
+    key:"carInsAmount"
   },
   {
     question: "On average, how much do you pay for gas for all vehicles per month?",
@@ -41,13 +52,15 @@ const questions = [
   },
 ];
 
-const answers = {
+const Transfersanswers = {
   ownVehicle :0,
   vehicleCount :0,
-  paymentFrequency :0,
-  paymentAmount :0,
-  paymentDate :0,
-  InsCost :0,
+  carPaymentfreq :0,
+  carPaymentAmount :0,
+  carPaymentDate :0,
+  carInsCost :0,
+  carInsfreq :0,
+  carInsAmount:0,
   gasCost :0,
 };
 
@@ -86,9 +99,9 @@ function displayCurrentQuestion() {
 function saveAnswer() {
   const currentQuestion = questions[currentQuestionIndex];
   if (currentQuestion.type === "options") {
-    answers[currentQuestion.key] = answerDropdown.value;
+    Transfersanswers[currentQuestion.key] = answerDropdown.value;
   } else {
-    answers[currentQuestion.key] = answerInput.value;
+    Transfersanswers[currentQuestion.key] = answerInput.value;
   }
 }
 
@@ -101,9 +114,9 @@ nextButton.addEventListener("click", () => {
   if (currentQuestionIndex < questions.length) {
     displayCurrentQuestion();
   } else {
-    const answersJSON = JSON.stringify(answers);
+    const answersJSON = JSON.stringify(Transfersanswers);
     console.log("Final answers JSON:", answersJSON);
-    localStorage.setItem("answers", answersJSON);
+    localStorage.setItem("Transfersanswers", answersJSON);
     confirm("Thank you for completing the Automotive and Transport section. Please choose to save and continue or save and exit.");
   }
 });
@@ -119,24 +132,24 @@ lastButton.addEventListener("click", () => {
   }
 });
 
-const skipsSection = document.getElementById("skip-button");
-skipButton.addEventListener("click", () => {
-  window.location.href = "Foodanddiningwiz.html";
-});
-const saveContinueButton = document.getElementById("save-continue-button");
-saveContinueButton.addEventListener("click", () => {
-  window.location.href = "Foodanddiningwiz.html";
-});
+const skipsSection = document.getElementById("skip-button");										
+skipButton.addEventListener("click", () => {										
+window.location.href = "Foodanddiningwiz.html";										
+});										
+const saveContinueButton = document.getElementById("save-continue-button");										
+saveContinueButton.addEventListener("click", () => {										
+window.location.href = "Foodanddiningwiz.html";										
+});										
 
 const saveexitButton = document.getElementById("save-exit-button");
 saveexitButton.addEventListener("click", () => {
 window.location.href = "NewUserIntro.html";
 });
 
-let answers_serialized = JSON.stringify(answers);
-console.log(answers_serialized);
+let Transfersanswers_serialized = JSON.stringify(Transfersanswers);
+console.log(Transfersanswers_serialized);
 
-localStorage.setItem("answers", answers_serialized);
+localStorage.setItem("Transfersanswers", Transfersanswers_serialized);
 
-let answers_deserialized = JSON.parse(localStorage.getItem("answers"));
+let Transfersanswers_deserialized = JSON.parse(localStorage.getItem("Transfersanswers"));
 
