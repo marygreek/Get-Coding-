@@ -28,6 +28,7 @@ const questions = [
     type: "text",
     key:"otherBillscost"
   },
+  
   // {
   //   question: "How much do you pay for car insurance for all vehicles per month?",
   //   type: "text",
@@ -106,31 +107,53 @@ function saveAnswer() {
 
   displayCurrentQuestion();
 
-nextButton.addEventListener("click", () => {
-  saveAnswer();
-  currentQuestionIndex++;
-
-  if (currentQuestionIndex < questions.length) {
-    displayCurrentQuestion();
-  } else {
-    const answersJSON = JSON.stringify(Billsandutilitiesanswers);
-    console.log("Final answers JSON:", answersJSON);
-    localStorage.setItem("Billsandutilitiesanswers", answersJSON);
-    // confirm("Thank you for completing the Automotive and Transport section. Please choose to save and continue or save and exit.");
-  }
-});
-
-lastButton.addEventListener("click", () => {
-  saveAnswer();
-  currentQuestionIndex--;
-
-  if (currentQuestionIndex >= 0) {
-    displayCurrentQuestion();
-  } else {
-    alert("You are at the beginning of the survey.");
-  }
-});
-
+  nextButton.addEventListener("click", () => {
+    saveAnswer();
+    currentQuestionIndex++;
+  
+    if (currentQuestionIndex < questions.length) {
+      displayCurrentQuestion();
+    } else {
+      const answersJSON = JSON.stringify(Billsandutilitiesanswers);
+      console.log("Final answers JSON:", answersJSON);
+      localStorage.setItem("Billsandutilitiesanswers", answersJSON);
+  
+      nextButton.style.display = "none";
+      lastButton.style.display = "none";
+  
+      const saveContinueButton = document.createElement("button");
+      saveContinueButton.id = "save-continue-button";
+      saveContinueButton.textContent = "Save and Continue";
+      saveContinueButton.addEventListener("click", () => {
+  
+        console.log("Data saved to local storage");
+        window.location.href = "Feesandchargeswiz.html";
+      });
+      questionContainer.appendChild(saveContinueButton);
+  
+      const saveExitButton = document.createElement("button");
+      saveExitButton.id = "save-exit-button";
+      saveExitButton.textContent = "Save and Exit";
+      saveExitButton.addEventListener("click", () => {
+  
+        console.log("Data saved to local storage");
+        window.location.href = "NewUserIntro.html";
+      });
+      questionContainer.appendChild(saveExitButton);
+    }
+  });
+  
+  lastButton.addEventListener("click", () => {
+    saveAnswer();
+    currentQuestionIndex--;
+  
+    if (currentQuestionIndex >= 0) {
+      displayCurrentQuestion();
+    } else {
+      alert("You are at the beginning of the survey.");
+    }
+  });
+  
 const skipsSection = document.getElementById("skip-button");										
 skipButton.addEventListener("click", () => {										
   window.location.href = "Feesandchargeswiz.html";										

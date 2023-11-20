@@ -116,7 +116,29 @@ nextButton.addEventListener("click", () => {
     const answersJSON = JSON.stringify(autoandtransportanswers);
     console.log("Final answers JSON:", answersJSON);
     localStorage.setItem("autoandtransportanswers", answersJSON);
-    // confirm("Thank you for completing the Automotive and Transport section. Please choose to save and continue or save and exit.");
+
+    nextButton.style.display = "none";
+    lastButton.style.display = "none";
+
+    const saveContinueButton = document.createElement("button");
+    saveContinueButton.id = "save-continue-button";
+    saveContinueButton.textContent = "Save and Continue";
+    saveContinueButton.addEventListener("click", () => {
+
+      console.log("Data saved to local storage");
+      window.location.href = "homewiz.html";
+    });
+    questionContainer.appendChild(saveContinueButton);
+
+    const saveExitButton = document.createElement("button");
+    saveExitButton.id = "save-exit-button";
+    saveExitButton.textContent = "Save and Exit";
+    saveExitButton.addEventListener("click", () => {
+
+      console.log("Data saved to local storage");
+      window.location.href = "NewUserIntro.html";
+    });
+    questionContainer.appendChild(saveExitButton);
   }
 });
 

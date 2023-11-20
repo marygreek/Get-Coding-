@@ -75,28 +75,26 @@ ul {
     text-transform: uppercase;
   }
   #save-continue-button {
-    position: absolute;
-    bottom: 15;
-    left: 400px; 
-    margin-left: 12px;
-    margin-top: 700px;
-    font-size: 21px;
-    background:#D9BBA9;
-    border-radius: 3px;
-    border: 0;
-    padding: 5px; 
-    color:black;
-  }
-  #save-exit-button {
-    position: absolute;
-    left: 620px; 
-    margin-top: 700px;
-    font-size: 21px; 
+    margin-top: 50px;
+    font-size: 17px;
     background:#D9BBA9;
     border-radius: 3px;
     border: 0;
     padding: 5px;
-    color: black; 
+    color: black;
+    margin-right: 17px;
+  }
+  #save-exit-button {
+    position: fixed;
+    bottom: 20px; /* Adjust this value as needed */
+    left: 410px; /* Adjust this value as needed */
+    font-size: 17px;
+    background: #D9BBA9;
+    border-radius: 3px;
+    border: 0;
+    padding: 5px; /* Adjust this value as needed */
+    color: black;
+    margin-right: 17px;
   }
   #question-container {
     font-size: 25px;
