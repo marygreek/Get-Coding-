@@ -1,67 +1,67 @@
 const questions = [
   {
-    question: "Do you own any vehicles that you still make payments on?",
+    question: "Do you receive any types on income not related to employment? Ex: Rental Income, Tax credits",
     type: "options",
     options: ["Yes", "No"],
-    key:"ownVehicle"
+    key:"miscIncome"
   },
   {
-    question: "How Many?",
+    question: "How much do you get paid? Please click next if you have no payments.",
     type: "text",
-    key:"vehicleCount"
+    key:"miscIncomepay"
     // If multiple vehicles - sub wizard for each - ex: Vehicle 1 and Vehicle 2
   },
-  {
-    question: "How often do you pay?",
-    type: "options",
-    options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
-    key:"carPaymentfreq"
-  },
+  // {
+  //   question: "How often do you pay?",
+  //   type: "options",
+  //   options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
+  //   key:"carPaymentfreq"
+  // },
 
-  {
-    question: "How much is your payment?",
-    type: "text",
-    key:"carPaymentAmount"
-  },
+  // {
+  //   question: "How much is your payment?",
+  //   type: "text",
+  //   key:"carPaymentAmount"
+  // },
 
-  {
-    question: "When is your next payment?",
-    type: "date",
-    key:"carPaymentDate"
-  },
-  {
-    question: "How much do you pay for car insurance for all vehicles per month?",
-    type: "text",
-    key:"carInsCost"
-  },
-  {
-    question: "How often do you pay?",
-    type: "options",
-    options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
-    key:"carInsfreq"
-  },
-  {
-    question: "How much is your payment?",
-    type: "text",
-    key:"carInsAmount"
-  },
-  {
-    question: "On average, how much do you pay for gas for all vehicles per month?",
-    type: "text",
-    key:"gasCost"
-  },
+  // {
+  //   question: "When is your next payment?",
+  //   type: "date",
+  //   key:"carPaymentDate"
+  // },
+  // {
+  //   question: "How much do you pay for car insurance for all vehicles per month?",
+  //   type: "text",
+  //   key:"carInsCost"
+  // },
+  // {
+  //   question: "How often do you pay?",
+  //   type: "options",
+  //   options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
+  //   key:"carInsfreq"
+  // },
+  // {
+  //   question: "How much is your payment?",
+  //   type: "text",
+  //   key:"carInsAmount"
+  // },
+  // {
+  //   question: "On average, how much do you pay for gas for all vehicles per month?",
+  //   type: "text",
+  //   key:"gasCost"
+  // },
 ];
 
 const Miscincomeanswers = {
-  ownVehicle :0,
-  vehicleCount :0,
-  carPaymentfreq :0,
-  carPaymentAmount :0,
-  carPaymentDate :0,
-  carInsCost :0,
-  carInsfreq :0,
-  carInsAmount:0,
-  gasCost :0,
+  miscIncome :0,
+  miscIncomepay :0,
+  // carPaymentfreq :0,
+  // carPaymentAmount :0,
+  // carPaymentDate :0,
+  // carInsCost :0,
+  // carInsfreq :0,
+  // carInsAmount:0,
+  // gasCost :0,
 };
 
 let currentQuestionIndex = 0;
@@ -117,7 +117,7 @@ nextButton.addEventListener("click", () => {
     const answersJSON = JSON.stringify(Miscincomeanswers);
     console.log("Final answers JSON:", answersJSON);
     localStorage.setItem("Miscincomeanswers", answersJSON);
-    confirm("Thank you for completing the Automotive and Transport section. Please choose to save and continue or save and exit.");
+    // confirm("Thank you for completing the Automotive and Transport section. Please choose to save and continue or save and exit.");
   }
 });
 

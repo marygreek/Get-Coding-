@@ -1,4 +1,4 @@
-const answersJSON = localStorage.getItem("answers");
+const answersJSON = localStorage.getItem("autoandtransportanswers");
 const answers = JSON.parse(answersJSON);
 const summaryContainer = document.getElementById("Autosummary-container");
 let summaryHTML = "<h2>Auto and Transportation</h2><ul>";

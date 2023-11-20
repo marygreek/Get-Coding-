@@ -1,67 +1,65 @@
 const questions = [
   {
-    question: "Do you own any vehicles that you still make payments on?",
+    question: "Are there any recurring personal care you payments you make each month?  Ex: Prescriptions, Physio Therapy , Gym Membership",
     type: "options",
     options: ["Yes", "No"],
-    key:"ownVehicle"
+    key:"personalCarepmts"
   },
   {
-    question: "How Many?",
+    question: "How much do you pay for personal care needs per month? Please click next if you have no costs.",
     type: "text",
-    key:"vehicleCount"
-    // If multiple vehicles - sub wizard for each - ex: Vehicle 1 and Vehicle 2
-  },
-  {
-    question: "How often do you pay?",
-    type: "options",
-    options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
-    key:"carPaymentfreq"
-  },
+    key:"personalCarecost"
+  }
+  //   question: "How often do you pay?",
+  //   type: "options",
+  //   options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
+  //   key:"carPaymentfreq"
+  // },
 
-  {
-    question: "How much is your payment?",
-    type: "text",
-    key:"carPaymentAmount"
-  },
+  // {
+  //   question: "How much is your payment?",
+  //   type: "text",
+  //   key:"carPaymentAmount"
+  // },
 
-  {
-    question: "When is your next payment?",
-    type: "date",
-    key:"carPaymentDate"
-  },
-  {
-    question: "How much do you pay for car insurance for all vehicles per month?",
-    type: "text",
-    key:"carInsCost"
-  },
-  {
-    question: "How often do you pay?",
-    type: "options",
-    options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
-    key:"carInsfreq"
-  },
-  {
-    question: "How much is your payment?",
-    type: "text",
-    key:"carInsAmount"
-  },
-  {
-    question: "On average, how much do you pay for gas for all vehicles per month?",
-    type: "text",
-    key:"gasCost"
-  },
+  // {
+  //   question: "When is your next payment?",
+  //   type: "date",
+  //   key:"carPaymentDate"
+  // },
+  // {
+  //   question: "How much do you pay for car insurance for all vehicles per month?",
+  //   type: "text",
+  //   key:"carInsCost"
+  // },
+  // {
+  //   question: "How often do you pay?",
+  //   type: "options",
+  //   options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
+  //   key:"carInsfreq"
+  // },
+  // {
+  //   question: "How much is your payment?",
+  //   type: "text",
+  //   key:"carInsAmount"
+  // },
+  // {
+  //   question: "On average, how much do you pay for gas for all vehicles per month?",
+  //   type: "text",
+  //   key:"gasCost"
+  // },
 ];
 
 const Personalcareanswers = {
-  ownVehicle :0,
-  vehicleCount :0,
-  carPaymentfreq :0,
-  carPaymentAmount :0,
-  carPaymentDate :0,
-  carInsCost :0,
-  carInsfreq :0,
-  carInsAmount:0,
-  gasCost :0,
+  personalCarepmts :0,
+  personalCarecost :0,
+  // carPaymentfreq :0,
+  // carPaymentAmount :0,
+  // carPaymentDate :0,
+  // carInsCost :0,
+  // carInsfreq :0,
+  // carInsAmount:0,
+  // gasCost :0,
 };
 
 let currentQuestionIndex = 0;
@@ -117,7 +115,7 @@ nextButton.addEventListener("click", () => {
     const answersJSON = JSON.stringify(Personalcareanswers);
     console.log("Final answers JSON:", answersJSON);
     localStorage.setItem("Personalcareanswers", answersJSON);
-    confirm("Thank you for completing the Automotive and Transport section. Please choose to save and continue or save and exit.");
+    // confirm("Thank you for completing the Automotive and Transport section. Please choose to save and continue or save and exit.");
   }
 });
 

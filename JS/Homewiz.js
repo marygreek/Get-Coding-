@@ -1,63 +1,63 @@
 const questions = [
+  // {
+  //   question: "Do you currently pay rent of for a mortgage?",
+  //   type: "options",
+  //   options: ["Yes", "No"],
+  //   key:"housingType"
+  // },
   {
-    question: "Do you currently pay rent of for a mortgage?",
-    type: "options",
-    options: ["Yes", "No"],
-    key:"housingType"
-  },
-  {
-    question: "Which type",
+    question: "Do you pay rent or for a mortgage?",
     type: "options",
     options: ["Rent", "Mortgage"],
     key:"rentMort"
     // If multiple vehicles - sub wizard for each - ex: Vehicle 1 and Vehicle 2
   },
-  {
-    question: "How often do you pay?",
-    type: "options",
-    options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
-    key:"homePaymentfreq"
-  },
+  // {
+  //   question: "How often do you pay?",
+  //   type: "options",
+  //   options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
+  //   key:"homePaymentfreq"
+  // },
 
   {
-    question: "How much is your payment?",
+    question: "How much do you pay each month?",
     type: "text",
     key:"homePaymentAmount"
   },
 
+  // {
+  //   question: "When is your next payment?",
+  //   type: "date",
+  //   key:"homePaymentDate"
+  // },
   {
-    question: "When is your next payment?",
-    type: "date",
-    key:"homePaymentDate"
-  },
-  {
-    question: "How much do you pay for home or renters insurance? ",
+    question: "How much do you pay for home or renters insurance each month?  ",
     type: "text",
     key:"homeInsCost"
   },
-  {
-    question: "How often do you pay?",
-    type: "options",
-    options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
-    key:"homeInsfreq"
-  },
-  {
-    question: "How much is your payment?",
-    type: "text",
-    key:"homeInsAmount"
-  },
+  // {
+  //   question: "How often do you pay?",
+  //   type: "options",
+  //   options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
+  //   key:"homeInsfreq"
+  // },
+  // {
+  //   question: "How much is your payment?",
+  //   type: "text",
+  //   key:"homeInsAmount"
+  // },
   
 ];
 
 const homeanswers = {
-  housingType :0,
+  // housingType :0,
   rentMort :0,
-  homePaymentfreq :0,
+  // homePaymentfreq :0,
   homePaymentAmount :0,
-  homePaymentDate :0,
+  // homePaymentDate :0,
   homeInsCost :0,
-  homeInsfreq :0,
-  homeInsAmount:0,
+  // homeInsfreq :0,
+  // homeInsAmount:0,
 };
 
 let currentQuestionIndex = 0;
@@ -113,7 +113,7 @@ nextButton.addEventListener("click", () => {
     const answersJSON = JSON.stringify(homeanswers);
     console.log("Final answers JSON:", answersJSON);
     localStorage.setItem("homeanswers", answersJSON);
-    confirm("Thank you for completing the Automotive and Transport section. Please choose to save and continue or save and exit.");
+    // confirm("Thank you for completing the Automotive and Transport section. Please choose to save and continue or save and exit.");
   }
 });
 

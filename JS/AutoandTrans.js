@@ -1,65 +1,65 @@
 const questions = [
+  // {
+  //   question: "Do you own any vehicles that you still make payments on?",
+  //   type: "options",
+  //   options: ["Yes", "No"],
+  //   key:"ownVehicle"
+  // },
   {
-    question: "Do you own any vehicles that you still make payments on?",
-    type: "options",
-    options: ["Yes", "No"],
-    key:"ownVehicle"
-  },
-  {
-    question: "How Many?",
+    question: "How many vehicles do you make  payments on? ",
     type: "text",
     key:"vehicleCount"
     // If multiple vehicles - sub wizard for each - ex: Vehicle 1 and Vehicle 2
   },
-  {
-    question: "How often do you pay?",
-    type: "options",
-    options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
-    key:"carPaymentfreq"
-  },
+  // {
+  //   question: "How often do you pay?",
+  //   type: "options",
+  //   options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
+  //   key:"carPaymentfreq"
+  // },
 
   {
-    question: "How much is your payment?",
+    question: "How much do you pay for all of your vehicles each month? ",
     type: "text",
     key:"carPaymentAmount"
   },
 
+  // {
+  //   question: "When is your next payment?",
+  //   type: "date",
+  //   key:"carPaymentDate"
+  // },
   {
-    question: "When is your next payment?",
-    type: "date",
-    key:"carPaymentDate"
-  },
-  {
-    question: "How much do you pay for car insurance for all vehicles per month?",
+    question: "How much do you pay for car insurance for all vehicles each month?",
     type: "text",
     key:"carInsCost"
   },
+  // {
+  //   question: "How often do you pay?",
+  //   type: "options",
+  //   options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
+  //   key:"carInsfreq"
+  // },
+  // {
+  //   question: "How much is your payment?",
+  //   type: "text",
+  //   key:"carInsAmount"
+  // },
   {
-    question: "How often do you pay?",
-    type: "options",
-    options: ["Monthly", "Bi-weekly", "Weekly", "Bi-monthly"],
-    key:"carInsfreq"
-  },
-  {
-    question: "How much is your payment?",
-    type: "text",
-    key:"carInsAmount"
-  },
-  {
-    question: "On average, how much do you pay for gas for all vehicles per month?",
+    question: "On average, how much do you pay for gas for all vehicles each month?",
     type: "text",
     key:"gasCost"
   },
 ];
 const autoandtransportanswers = {
-  ownVehicle :0,
+  // ownVehicle :0,
   vehicleCount :0,
-  carPaymentfreq :0,
+  // carPaymentfreq :0,
   carPaymentAmount :0,
-  carPaymentDate :0,
+  // carPaymentDate :0,
   carInsCost :0,
-  carInsfreq :0,
-  carInsAmount:0,
+  // carInsfreq :0,
+  // carInsAmount:0,
   gasCost :0,
 };
 
@@ -116,7 +116,7 @@ nextButton.addEventListener("click", () => {
     const answersJSON = JSON.stringify(autoandtransportanswers);
     console.log("Final answers JSON:", answersJSON);
     localStorage.setItem("autoandtransportanswers", answersJSON);
-    confirm("Thank you for completing the Automotive and Transport section. Please choose to save and continue or save and exit.");
+    // confirm("Thank you for completing the Automotive and Transport section. Please choose to save and continue or save and exit.");
   }
 });
 
@@ -151,4 +151,5 @@ console.log(autoandtransportanswers_serialized);
 localStorage.setItem("autoandtransportanswers", autoandtransportanswers_serialized);
 
 let autoandtransportanswers_deserialized = JSON.parse(localStorage.getItem("autoandtransportanswers"));
+
 

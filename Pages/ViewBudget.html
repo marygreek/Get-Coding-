@@ -5,5 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>View Budget</title>
   </head>
+  <script>
+
+
+// Local Storage 
+
+const answersJSON = localStorage.getItem("autoandtransportanswers");
+const answers = JSON.parse(answersJSON);
+const summaryContainer = document.getElementById("Autosummary-container");
+let summaryHTML = "<h2>Auto and Transportation</h2><ul>";
+
+for (const key in answers) {
+  summaryHTML += `<li><strong>${key}:</strong> ${answers[key]}</li>`;
+}
+
+summaryHTML += "</ul>";
+summaryContainer.innerHTML = summaryHTML;
+
+// Create widget element - Manually input key
+// Create function to pull data from local storage to populate Widget
+
+  </script>
   <body>
 </html>
