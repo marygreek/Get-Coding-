@@ -1,11 +1,23 @@
-const answersJSON = localStorage.getItem("autoandtransportanswers");
-const answers = JSON.parse(answersJSON);
-const summaryContainer = document.getElementById("Autosummary-container");
-let summaryHTML = "<h2>Auto and Transportation</h2><ul>";
+// Pulled Data from local storage
+const retrievedData = JSON.parse(localStorage.getItem('autoandtransportanswers',));
+console.log(retrievedData);
 
-for (const key in answers) {
-  summaryHTML += `<li><strong>${key}:</strong> ${answers[key]}</li>`;
+// // Pulled values only from object in local storage
+const values = Object.values(retrievedData);
+console.log(values);
+
+// // Create Function
+function displayValues(retrievedData) {
+    const summaryContainer = document.getElementById('summary-container');
+
+    // Create Heading
+    let content = '<p>Auto and Transport</p>';
+
+    // Add values 
+    content += values.join(', ') 
+
+    // Update the content of the summary container
+    summaryContainer.innerHTML = content;
 }
-
-summaryHTML += "</ul>";
-summaryContainer.innerHTML = summaryHTML;
+// Call the function to display values
+displayValues(retrievedData);

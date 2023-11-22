@@ -1,4 +1,4 @@
-.line {
+  .line {
     position: absolute;
     top: 80px; 
     left: 0;
@@ -20,7 +20,7 @@
     text-decoration: none;
     color: rgb(0, 0, 0);
   }
-  ul {
+    ul {
     list-style-type: none;
     padding: 0px;
   }
@@ -54,14 +54,7 @@
       color: rgb(0, 0, 0);
       font-weight: bold;
     }
-    p {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 21px;
-      margin-top: 30px;
-      margin-bottom: 40px;
-      padding: 0px;
-      width: 800px;
-    }
+
     .header {
       font-size: 24px;
       margin-top: 30px;
@@ -79,7 +72,7 @@
       bottom: 15;
       left: 400px; 
       margin-left: 12px;
-      margin-top: 700px;
+      margin-top: 800px;
       font-size: 21px;
       background:#D9BBA9;
       border-radius: 3px;
@@ -87,66 +80,25 @@
       padding: 5px; 
       color:black;
     }
-    #question-container {
-      font-size: 25px;
-      margin-top: 150px;
-      margin-bottom: 40px;
-      padding: 10px;
-      width: 100%
-      ;color:  rgb(0, 0, 0);
+
+    #right {
       position: absolute;
-      top: 100px; 
-      left: 400px;
+      top: 50%; /* Adjust to center vertically */
+      right: 50;
+      transform: translateY(-50%); /* Center the container vertically using transform */
+      text-align: center; /* Center the content within the .right container */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* Center items horizontally */
     }
-    .right {
-      position: absolute;
-      top: 100px;
-      right: 0;
-      text-align: right; 
+    
+    #summary-container {
+      width: 300px;
+      height: 200px;
+      border: 1px solid #ccc;
+      margin: 20px;
+      padding: 15px;
+      text-align: center;
     }
-    .right img {
-      display: block;
-      margin: 0 auto;
-      margin-top: 75px;
-      opacity: 0.5;
-      height: auto;
-      width: 700px;
-    }
-    /* #Autosummary-container {
-    position: absolute;
-      top:70px;
-      left: 400px;
-      font-size: 21px;
-      border: 0;
-      margin: 5px 0;
-      padding: 5px;
-      color: black;
-      font-weight: 400
-    } */
-    .summary-container {
-        width: 200px; /* Adjust the width based on your design */
-        height: 150px; /* Adjust the height based on your design */
-        border: 1px solid #ccc; /* Add a border for separation */
-        margin: 10px; /* Adjust the margin based on your design */
-        padding: 10px;
-        display: inline-block;
-        text-align: center;
-      }
-      
-      .column {
-        display: flex;
-        flex-direction: column;
-      }
-      
-      .row {
-        display: flex;
-        flex-direction: row;
-      }
-      Update your JavaScript (Summary.js) as needed.
-      Now, your summary containers should appear in a 2x4 grid with a border around each container. You can customize the width, height, border, margin, and padding values to achieve the desired look for your grid. Adjust the styles based on your specific design requirements.
-      
-      
-      
-      
-      
-      
+    
+   

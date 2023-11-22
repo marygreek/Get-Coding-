@@ -57,24 +57,20 @@
         background-color: #444;
     }
     
+    /* Add this style to center the "Forgot Password" link */
     .forgot-links {
-        text-align: center;
-        margin-top: 800px;
-      }
-      
-      .forgot-links a {
-        text-decoration: none;
-        color: #333;
-      }
-      
-      .forgot-links a:hover {
-        text-decoration: underline;
-      }
-      
-      .forgot-username {
-        margin-top: 800px; /* Adjust the margin as needed */
-        text-align: center;
-      }
+      text-align: center;
+      margin-top: 20px; /* Adjust the margin as needed */
+    }
+
+    .forgot-links a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .forgot-links a:hover {
+      text-decoration: underline;
+    }
       h1 {
         font-weight: 70;
         font-size: 30px;
@@ -91,7 +87,7 @@
         font-size: 30px;
         margin-top: 30px;
         margin-bottom: 40px;
-        text-align: left;
+        text-align: center;
         text-wrap:;
         padding: 0px;
         width: 400px;

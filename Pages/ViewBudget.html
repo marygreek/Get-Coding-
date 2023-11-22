@@ -56,36 +56,8 @@ summaryContainer.innerHTML = summaryHTML;
   </head>
   <body>
     <div class="widget-container" id="widgetContainer">
-      <!-- Widget boxes will be dynamically added here -->
+      <!-- Widget boxes will be added here -->
     </div>
-
-    <script>
-      // Retrieve names from local storage or use default values
-      const namesFromLocalStorage =
-        JSON.parse(localStorage.getItem("widgetNames")) || [];
-
-      // Function to render the widget boxes
-      function renderWidgetBoxes() {
-        const widgetContainer = document.getElementById("widgetContainer");
-
-        // Clear existing content
-        widgetContainer.innerHTML = "";
-
-        // Create and append new widget boxes
-        for (let i = 0; i < 9; i++) {
-          const widgetBox = document.createElement("div");
-          widgetBox.classList.add("widget-box");
-
-          // Display name from local storage or placeholder
-          const name = namesFromLocalStorage[i] || `Widget ${i + 1}`;
-          widgetBox.textContent = name;
-
-          widgetContainer.appendChild(widgetBox);
-        }
-      }
-
-      // Initial rendering
-      renderWidgetBoxes();
     </script>
   </body>
 </html>

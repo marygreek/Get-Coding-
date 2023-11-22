@@ -44,6 +44,8 @@ ul.navbar {
   .left {
     text-align: center;
     width: 38%;
+    /* background: url('/Images/LP\ Background.jpg') center/cover; */
+    
   }
   .right {
     width: 62%;
@@ -63,11 +65,28 @@ ul.navbar {
     clear: both;
   }
   p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
-    margin-top: 150px;
+    font-family: sans-serif; 
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px; 
+    margin-top: 75px;
     margin-bottom: 50px;
     margin-left: 55px;
     padding: 0px;
     width: 600px;
+    color: white;
+    line-height: 1.5; 
+  }
+  .Motto {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    margin-left: 55px;
+    padding: 0px;
+    width: 600px;
+    color: white;
+    line-height: 1.5;
   }
