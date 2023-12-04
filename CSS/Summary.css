@@ -6,44 +6,44 @@
     border-top: 1px solid #000; 
   }
   .navbar {
-      width: 15%; 
-      background-color: #b0c1b3;
-      padding: 20px;
-      color: white;
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      font-size: larger;
+    width: 10%; 
+    background-color: #b0c1b3;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    font-size: larger;
   }
   .navbar li a {
     text-decoration: none;
     color: rgb(0, 0, 0);
   }
-    ul {
+  ul {
     list-style-type: none;
     padding: 0px;
   }
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: white;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center; 
-      align-items: center; 
-      min-height: 100vh; 
-    }
-    h1 {
-      font-weight: 70;
-      font-size: 24px;
-      margin-top: 30px;
-      margin-bottom: 40px;
-      padding: 0px;
-      width: 400px;
-      text-transform: uppercase;
-      color: rgb(0, 0, 0);
-    }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+  }
+  h1 {
+    font-weight: 70;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 0px;
+    width: 400px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+  }
     h2 {
       font-weight: 70;
       font-size: 20px;
@@ -67,29 +67,17 @@
       left: 400px;
       text-transform: uppercase;
     }
-    #save-continue-button {
-      position: absolute;
-      bottom: 15;
-      left: 400px; 
-      margin-left: 12px;
-      margin-top: 800px;
-      font-size: 21px;
-      background:#D9BBA9;
-      border-radius: 3px;
-      border: 0;
-      padding: 5px; 
-      color:black;
-    }
 
     #right {
       position: absolute;
-      top: 50%; /* Adjust to center vertically */
-      right: 50;
-      transform: translateY(-50%); /* Center the container vertically using transform */
-      text-align: center; /* Center the content within the .right container */
+      top: 50%; 
+      right: 50%;
+      transform: translate(50%, -50%);
+      text-align: center; 
       display: flex;
       flex-wrap: wrap;
-      justify-content: center; /* Center items horizontally */
+      justify-content: right; 
+      width: 90%;
     }
     
     #summary-container {
@@ -100,5 +88,20 @@
       padding: 15px;
       text-align: center;
     }
-    
-   
+ 
+   table, tr { 
+    border:1px solid #d3d3d3;width: 100px;
+    margin-top: 10px;
+    width: 100%;
+  }
+  #summary-container td {
+    white-space: nowrap;
+    padding: 3px;
+  }
+  tbody {
+    text-align: left;
+  }
+
+  tfoot{
+  text-align: left;
+}
