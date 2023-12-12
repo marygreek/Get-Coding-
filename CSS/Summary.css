@@ -1,12 +1,12 @@
-  .line {
-    position: absolute;
-    top: 80px; 
-    left: 0;
-    width: 100%;
-    border-top: 1px solid #000; 
-  }
-  .navbar {
-    width: 10%; 
+.line {
+  position: absolute;
+  top: 80px; 
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #000; 
+}
+.navbar {
+    width: 15%; 
     background-color: #b0c1b3;
     padding: 20px;
     color: white;
@@ -15,11 +15,11 @@
     left: 0;
     bottom: 0;
     font-size: larger;
-  }
-  .navbar li a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-  }
+}
+.navbar li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
   ul {
     list-style-type: none;
     padding: 0px;
@@ -105,3 +105,20 @@
   tfoot{
   text-align: left;
 }
+#summary-row tfoot tr {
+  background-color: grey;
+  color: white;
+
+}
+.budgetsummary .label {
+  background-color: grey; 
+  color: white; 
+  padding: 5px;
+}
+
+#summary-container span {
+  background-color: #b0c1b3; 
+  color: white; 
+  padding: 5px;
+}
+

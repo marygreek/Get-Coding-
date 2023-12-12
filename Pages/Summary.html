@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="../CSS/Summary.css" />
   </head>
   <body>
+    <div class="Header">
+      <span class="header">Auto and Transportation</span>
+      <div class="line"></div>
+    </div>
     <div class="navbar">
       <h1>Quick Links</h1>
       <h2>Expenses</h2>
@@ -62,76 +66,76 @@
           <tbody>
             <tr>
               <td>Rent or Mortgage</td>
-              <td class="autoandtransport-vehicle-count"></td>
+              <td class="home-rent-mortgage"></td>
             </tr>
             <tr>
               <td>Housing Costs</td>
-              <td class="autoandtransport-vehicle-costs"></td>
+              <td class="home-housing-costs"></td>
             </tr>
             <tr>
-              <td>Insurance Costs</td>
-              <td class="autoandtransport-insurance-costs"></td>
+              <td>Home Insurance Costs</td>
+              <td class="home-insurance-costs"></td>
             </tr>
           <tfoot>
             <tr>
               <td>Sum of Costs</td>
-              <td class="autoandtransport-sum-of-costs"></td>
+              <td class="home-sum-of-costs"></td>
             </tr>
           </tfoot>
         </table>
       </div>
-      <div class="Bills and Utilities-summary-container" id="summary-container">
+      <div class="billandutilities-summary-container" id="summary-container">
         <span> Bills and Utilities</span>
         <table>
           <tbody>
             <tr>
               <td>Streaming Service Costs</td>
-              <td class="autoandtransport-vehicle-count"></td>
+              <td class="billsandutilities-streaming-service-costs"></td>
             </tr>
             <tr>
               <td>Utilities Costs</td>
-              <td class="autoandtransport-vehicle-costs"></td>
+              <td class="billsandutilities-utility-costs"></td>
             </tr>
             <tr>
               <td>Phone Costs</td>
-              <td class="autoandtransport-insurance-costs"></td>
+              <td class="billsandutilities-phone-costs"></td>
             </tr>
             <tr>
-              <td>Have Other Recurring Payments?</td>
-              <td class="autoandtransport-gas-costs"></td>
+              <td>Other Recurring Payments?</td>
+              <td class="billsandutilities-have-recurring-costs"></td>
             </tr>
             <tr>
               <td>Recurring Payments Costs</td>
-              <td class="autoandtransport-gas-costs"></td>
+              <td class="billsandutilities-recurring-costs"></td>
             </tr>
           </tbody>
           <tfoot>
             <tr>
               <td>Sum of Costs</td>
-              <td class="autoandtransport-sum-of-costs"></td>
+              <td class="billsandutilities-sum-of-costs"></td>
             </tr>
           </tfoot>
         </table>
       </div>
     </div> 
     <div id="summary-row">
-      <div class="Fees and Charges-summary-container" id="summary-container">
+      <div class="feesancharges-summary-container" id="summary-container">
         <span> Fees and Charges</span>
         <table>
           <tbody>
             <tr>
               <td>Any Fees and Charges?</td>
-              <td class="autoandtransport-vehicle-count"></td>
+              <td class="feesandcharges-fees-charges"></td>
             </tr>
             <tr>
               <td>Fees and Charges Costs</td>
-              <td class="autoandtransport-vehicle-costs"></td>
+              <td class="feesandcharges-fees-charges-costs"></td>
             </tr>
           </tbody>
           <tfoot>
             <tr>
               <td>Sum of Costs</td>
-              <td class="autoandtransport-sum-of-costs"></td>
+              <td class="feesandcharges-sum-of-costs"></td>
             </tr>
           </tfoot>
         </table>
@@ -142,142 +146,140 @@
           <tbody>
             <tr>
               <td>Any recurring transfers?</td>
-              <td class="autoandtransport-vehicle-count"></td>
+              <td class="transfers-have-transfers"></td>
             </tr>
             <tr>
               <td>Recurring Transfers Costs</td>
-              <td class="autoandtransport-vehicle-costs"></td>
+              <td class="transfers-transfers-costs"></td>
             </tr>
           </tbody>
           <tfoot>
             <tr>
               <td>Sum of Costs</td>
-              <td class="autoandtransport-sum-of-costs"></td>
+              <td class="transfers-sum-of-costs"></td>
             </tr>
           </tfoot>
         </table>
       </div>
-      <div class="Food and Dining -summary-container" id="summary-container">
+      <div class="foodanddining-summary-container" id="summary-container">
         <span> Food and Dining</span>
         <table>
-          <tbody>
-            <tr>
-              <td>Pets?</td>
-              <td class="autoandtransport-vehicle-count"></td>
-            </tr>
-            <tr>
-              <td>Pet Costs</td>
-              <td class="autoandtransport-vehicle-costs"></td>
-            </tr>
-            <tr>
-              <td>Grocery Costs</td>
-              <td class="autoandtransport-insurance-costs"></td>
-            </tr>
-            <tr>
-              <td>Dining Out Budget</td>
-              <td class="autoandtransport-gas-costs"></td>
-            </tr>
-          </tfoot>
+            <tbody>
+                <tr>
+                    <td>Pets?</td>
+                    <td class="foodanddining-have-pet"></td>
+                </tr>
+                <tr>
+                    <td>Pet Costs</td>
+                    <td class="foodanddining-pet-costs"></td>
+                </tr>
+                <tr>
+                    <td>Grocery Costs</td>
+                    <td class="foodanddining-grocery-costs"></td>
+                </tr>
+                <tr>
+                    <td>Dining Out Budget</td>
+                    <td class="foodanddining-dining-costs"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Sum of Costs</td>
+                    <td class="foodanddining-sum-of-costs"></td>
+                </tr>
+            </tfoot>
         </table>
-      </div>
+    </div>
     </div> 
     <div id="summary-row">
-      <div class="Persocal Care" id="summary-container">
+      <div class="personalcare-summary-container" id="summary-container">
         <span> Personal Care</span>
         <table>
           <tbody>
             <tr>
               <td>Any recurring Personal Care Costs?</td>
-              <td class="autoandtransport-vehicle-count"></td>
+              <td class="personalcare-have-costs"></td>
             </tr>
             <tr>
               <td>Personal Care Costs</td>
-              <td class="autoandtransport-vehicle-costs"></td>
+              <td class="personalcare-personal-costs"></td>
             </tr>
           </tbody>
           <tfoot>
             <tr>
               <td>Sum of Costs</td>
-              <td class="autoandtransport-sum-of-costs"></td>
+              <td class="personalcare-sum-of-costs"></td>
             </tr>
           </tbody> 
           </tfoot>
         </table>
       </div>
-      <div class="Work Income-summary-container" id="summary-container">
+      <div class="workincome-summary-container" id="summary-container">
         <span> Work Income</span>
         <table>
           <tbody>
             <tr>
               <td>Receive Employment Income?</td>
-              <td class="autoandtransport-vehicle-count"></td>
+              <td class="workincome-employment-income"></td>
             </tr>
             <tr>
               <td>Employment Income</td>
-              <td class="autoandtransport-vehicle-costs"></td>
+              <td class="workincome-employement-income-pay"></td>
             </tr>
           </tbody>
           <tfoot>
             <tr>
               <td>Sum of Costs</td>
-              <td class="autoandtransport-sum-of-costs"></td>
+              <td class="workincome-sum-of-costs"></td>
             </tr>
           </tfoot>
         </table>
       </div>
-      <div class="Misc Income-summary-container" id="summary-container">
+      <div class="miscincome-summary-container" id="summary-container">
         <span> Misc Income </span>
         <table>
           <tbody>
             <tr>
               <td>Receive Misc Income?</td>
-              <td class="autoandtransport-vehicle-count"></td>
+              <td class="miscincome-misc-income"></td>
             </tr>
             <tr>
-              <td>Employment Income</td>
-              <td class="autoandtransport-vehicle-costs"></td>
+              <td>Misc Income</td>
+              <td class="miscincome-micsincome-pay"></td>
             </tr>
           </tbody>
           <tfoot>
             <tr>
               <td>Sum of Costs</td>
-              <td class="autoandtransport-sum-of-costs"></td>
+              <td class="miscincome-sum-of-costs"></td>
             </tr>
           </tfoot>
         </table>
       </div>
     </div> 
     <div id="summary-row">
-      <div class="Budget Summary" id="summary-container">
+      <div class="budgetsummary" id="summary-container">
         <span> Budget Summary</span>
         <table>
-          <tbody>
-            <tr>
-              <td>Total Expenses</td>
-              <td class="autoandtransport-vehicle-count"></td>
-            </tr>
-            <tr>
-              <td>Total Inccome</td>
-              <td class="autoandtransport-vehicle-costs"></td>
-            </tr>
-            <tr>
-              <td>Under/Over Budget</td>
-              <td class="autoandtransport-insurance-costs"></td>
-            </tr>
-            <!-- <tr>
-              <td>Gas Costs</td>
-              <td class="autoandtransport-gas-costs"></td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td>Sum of Costs</td>
-              <td class="autoandtransport-sum-of-costs"></td>
-            </tr> -->
-          </tfoot>
+            <tbody>
+                <tr>
+                    <td>Total Expenses</td>
+                    <td class="budgetsummary-expenses"></td>
+                </tr>
+                <tr>
+                    <td>Total Income</td>
+                    <td class="budgetsummary-income"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="label">Under/Over Budget</span>
+                    </td>
+                    <td class="budgetsummary-under-over"></td>
+                </tr>
+            </tbody>
         </table>
-      </div>
-  </body>
+    </div>
+    </body>
   <script src="/JS/Summary.js"></script>
 </html>
 

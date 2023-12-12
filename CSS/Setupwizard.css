@@ -84,6 +84,17 @@ ul {
     color: black;
     margin-right: 17px;
   }
+
+  #view-budget-button {
+    margin-top: 50px;
+    font-size: 17px;
+    background:#D9BBA9;
+    border-radius: 3px;
+    border: 0;
+    padding: 5px;
+    color: black;
+    margin-right: 17px;
+  }
   #save-exit-button {
     position: fixed;
     bottom: 20px; /* Adjust this value as needed */
@@ -159,11 +170,3 @@ ul {
     height: auto;
     width: 700px;
   }
-  /* .progress-bar {
-    display: inline-block;
-    width: 60px;
-    height: 10px;
-    background-color: white;
-    margin-left: 5px;
-    float: right; Align to the right */
-    

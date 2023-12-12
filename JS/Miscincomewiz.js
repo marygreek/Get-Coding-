@@ -123,7 +123,7 @@ nextButton.addEventListener("click", () => {
 
     const saveContinueButton = document.createElement("button");
     saveContinueButton.id = "save-continue-button";
-    saveContinueButton.textContent = "Save and Continue";
+    saveContinueButton.textContent = "View Budget";
     saveContinueButton.addEventListener("click", () => {
 
       console.log("Data saved to local storage");
